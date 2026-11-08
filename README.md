@@ -1,4 +1,4 @@
-# Vibe Coding Portfolio
+﻿# Vibe Coding Portfolio
 
 Real, production websites built through AI-assisted ("vibe") coding: describing intent in plain language, previewing every change, and refining iteratively until it ships.
 
@@ -9,7 +9,7 @@ Real, production websites built through AI-assisted ("vibe") coding: describing 
 ## Projects
 
 ### 1. NyotaCore: company website
-**Live:** https://nyotacore.com.ng  ·  _Code coming soon_
+**Live:** https://nyotacore.com.ng  Â·  **Folder:** [`nyotacore-site/`](./nyotacore-site)
 
 Multi-page marketing site for a Lagos-based technology company (software, cloud/DevOps, cybersecurity, AI agents, vessel data services).
 
@@ -19,14 +19,14 @@ Multi-page marketing site for a Lagos-based technology company (software, cloud/
 - "Why NyotaCore" fade-swap tabs and a 9-sector Industries orbit
 - Services page with a two-column hover-driven list/detail panel and case study
 - Site-wide SEO: meta tags, Open Graph images, JSON-LD structured data, sitemap, robots.txt
-- CI/CD: GitHub Actions on a self-hosted Windows runner deploying to IIS (staging → production)
+- CI/CD: GitHub Actions on a self-hosted Windows runner deploying to IIS (staging â†’ production)
 
-**Stack:** HTML · PHP · Tailwind CSS v4 · JavaScript · IIS · GitHub Actions
+**Stack:** HTML Â· PHP Â· Tailwind CSS v4 Â· JavaScript Â· IIS Â· GitHub Actions
 
 ---
 
 ### 2. NyotaCore Talent: recruitment platform
-**Live:** https://talent.nyotacore.com.ng  ·  **Folder:** [`nyotacore-talent/`](./nyotacore-talent)
+**Live:** https://talent.nyotacore.com.ng  Â·  **Folder:** [`nyotacore-talent/`](./nyotacore-talent)
 
 Recruitment site connecting skilled African talent with employers in Nigeria and abroad, covering skilled trades (mechanics, welders, electricians) and tech roles (Cloud, DevOps, SRE, AI, developers).
 
@@ -38,7 +38,7 @@ Recruitment site connecting skilled African talent with employers in Nigeria and
 - Roles/locations catalogue editor and team management with role-based access (admin vs recruiter)
 - SMTP email notifications, SEO and share images
 
-**Stack:** PHP · MySQL · JavaScript · HTML/CSS · cPanel hosting
+**Stack:** PHP Â· MySQL Â· JavaScript Â· HTML/CSS Â· cPanel hosting
 
 **Run locally**
 ```bash
@@ -50,7 +50,7 @@ php -S localhost:8000
 ---
 
 ### 3. Nyota Foundations: NGO website
-**Live:** https://mission.nyotacore.com.ng  ·  **Folder:** [`nyota-foundations/`](./nyota-foundations)
+**Live:** https://mission.nyotacore.com.ng  Â·  **Folder:** [`nyota-foundations/`](./nyota-foundations)
 
 Charity website for a foundation supporting displaced families: story-led pages, online giving and a contact form.
 
@@ -60,7 +60,7 @@ Charity website for a foundation supporting displaced families: story-led pages,
 - SMTP contact form via PHPMailer, with validation and friendly status messages
 - Secrets kept in a web-blocked `private/config.php`, never in HTML/JS
 
-**Stack:** HTML · CSS · JavaScript · PHP · Paystack · PHPMailer · cPanel hosting
+**Stack:** HTML Â· CSS Â· JavaScript Â· PHP Â· Paystack Â· PHPMailer Â· cPanel hosting
 
 **Run locally**
 ```bash
@@ -80,3 +80,4 @@ php -S localhost:8000
 
 ## Note
 Secrets (database and SMTP credentials, server deploy scripts) are intentionally excluded. In each project, copy `private/config.example.php` to `private/config.php` and add your own settings.
+
