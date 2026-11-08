@@ -1,0 +1,63 @@
+NYOTA FOUNDATIONS — WEBSITE
+===========================
+Domain: mission.nyotacore.com.ng
+
+DEPLOY ON CPANEL
+----------------
+1. cPanel > File Manager > open "public_html".
+2. Upload the zip, then right-click > Extract. Delete the zip afterwards.
+   Keep the folder STRUCTURE intact — do not flatten it. It must look like:
+        public_html/index.html
+        public_html/about.html
+        public_html/donate.html
+        public_html/contact.html
+        public_html/style.css
+        public_html/main.js
+        public_html/favicon.svg
+        public_html/send.php                         (contact form mailer)
+        public_html/private/config.php               (your settings - see below)
+        public_html/phpmailer/src/...                (required by send.php)
+        public_html/payment/online/callback/index.php (Paystack verify)
+3. Make sure the domain/subdomain document root points to this public_html.
+4. Visit https://mission.nyotacore.com.ng — done.
+
+PHP is required (contact form + payment verify). cPanel has PHP by default.
+
+WHAT IS ALREADY WIRED IN
+------------------------
+* Brand, logo and favicon: Nyota Foundations (gold star = "Nyota" means star).
+* Email:  hello@mission.nyotacore.com.ng
+* Phone/WhatsApp:  +234 814 089 1605
+* Office:  Maitama, Abuja
+* Donations: Paystack (TEST MODE). The public key is in donate.html;
+  the secret key is server-side only in private/config.php.
+* Contact form: posts to send.php, which sends over SMTP to your inbox.
+
+DONATIONS (Paystack)
+--------------------
+* Currently TEST keys — no real money moves. Use Paystack test cards to try it.
+* Put your public key (pk_test_... / pk_live_...) in donate.html, and your
+  secret key (sk_test_... / sk_live_...) in private/config.php.
+* In your Paystack dashboard, set the callback URL to:
+      https://mission.nyotacore.com.ng/payment/online/callback
+* SECURITY: the secret key (sk_...) must NEVER appear in any .html or .js
+  file. Keep it only in private/config.php.
+
+CONTACT FORM (SMTP)
+-------------------
+Copy private/config.example.php to private/config.php and fill in your
+SMTP host, port, encryption, user and password, plus the inbox (mail_to).
+If email fails to send, confirm your host allows outbound SMTP on that port.
+
+STILL TO REPLACE (optional)
+---------------------------
+* Homepage impact numbers (8,400 / 1,250 / 46 / 300) are placeholders — put in
+  real figures you can stand behind. They are not verified statistics.
+* Photos load from Unsplash so the site looks complete now. To use your own,
+  upload to public_html/images/ and swap the image URLs in the HTML.
+
+SECURITY NOTE
+-------------
+The SMTP password and Paystack secret key live only in private/config.php,
+which is blocked from the web and excluded from git. Rotate them if they are
+ever exposed.

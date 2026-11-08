@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Nyota Foundations</title>
+<meta name="description" content="Get in touch with Nyota Foundations to donate, volunteer or partner in serving displaced Nigerian families.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav wrap">
+    <a class="brand" href="index.html"><span class="mark">&#9733;</span><span>Nyota Foundations<small>Light of Hope &middot; Nigeria</small></span></a>
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li class="nav-cta"><a class="btn btn-nav" href="donate.html">Donate</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="banner">
+  <div class="banner-bg" style="background-image:linear-gradient(120deg,rgba(20,67,47,.94),rgba(36,48,79,.8)),url('https://images.unsplash.com/photo-1571417800906-5a5058dbd45d?auto=format&fit=crop&w=1600&q=70')"></div>
+  <div class="wrap">
+    <p class="crumb">Home &nbsp;&rsaquo;&nbsp; Contact</p>
+    <h1>Let's serve together</h1>
+    <p>Whether you want to donate, volunteer, partner or simply learn more, we would love to hear from you.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split">
+    <!-- Form -->
+    <div class="reveal">
+      <p class="eyebrow dark">Send a message</p>
+      <h2>Reach out to the team</h2>
+      <div id="form-alert" style="display:none;margin:0 0 1rem;padding:.9rem 1.1rem;border-radius:11px;font-size:.92rem"></div>
+      <form action="send.php" method="post" class="donate-box" style="margin-top:1rem">
+        <div class="row2">
+          <div class="field"><label for="fname">First name</label><input id="fname" name="fname" type="text" required></div>
+          <div class="field"><label for="lname">Last name</label><input id="lname" name="lname" type="text" required></div>
+        </div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required></div>
+        <div class="field"><label for="topic">I'd like to</label>
+          <select id="topic" name="topic"><option>Make a donation</option><option>Volunteer</option><option>Partner with the foundation</option><option>Ask a question</option></select>
+        </div>
+        <div class="field"><label for="message">Message</label><textarea id="message" name="message" required></textarea></div>
+        <button class="btn btn-gold" type="submit" style="width:100%;justify-content:center">Send message</button>
+      </form>
+    </div>
+
+    <!-- Contact info -->
+    <div class="reveal">
+      <p class="eyebrow dark">Contact details</p>
+      <h2>Other ways to reach us</h2>
+      <div class="info-item"><div class="ic">&#9993;</div><div><h4>Email</h4><p><a href="mailto:hello@mission.nyotacore.com.ng">hello@mission.nyotacore.com.ng</a></p></div></div>
+      <div class="info-item"><div class="ic">&#9742;</div><div><h4>Phone &amp; WhatsApp</h4><p><a href="tel:+2348140891605">+234 814 089 1605</a></p></div></div>
+      <div class="info-item"><div class="ic">&#9873;</div><div><h4>Office</h4><p>Maitama, Abuja</p></div></div>
+      <div class="info-item"><div class="ic">&#128337;</div><div><h4>Hours</h4><p>Monday &ndash; Friday, 9:00am &ndash; 5:00pm (WAT)</p></div></div>
+
+      <div class="bank" style="border-style:solid">
+        <strong style="color:var(--pine)">In an emergency?</strong>
+        <p style="margin:.4rem 0 0;font-size:.92rem;color:var(--muted)">If you know a family in urgent need of shelter or food, call or WhatsApp us directly and our response team will follow up.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="index.html"><span class="mark">&#9733;</span><span>Nyota Foundations<small>Light of Hope &middot; Nigeria</small></span></a>
+        <p style="margin-top:1rem">A faith-united Nigerian relief foundation sheltering families displaced by banditry and kidnapping.</p>
+      </div>
+      <div><h4>Explore</h4><a href="index.html">Home</a><a href="about.html">About Us</a><a href="donate.html">Donate</a><a href="contact.html">Contact</a></div>
+      <div><h4>Get involved</h4><a href="donate.html">Give a donation</a><a href="contact.html">Volunteer</a><a href="contact.html">Partner with us</a></div>
+      <div><h4>Reach us</h4><a href="mailto:hello@mission.nyotacore.com.ng">hello@mission.nyotacore.com.ng</a><a href="tel:+2348140891605">+234 814 089 1605</a><a href="#">Maitama, Abuja</a></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year">2026</span> Nyota Foundations &middot; Light of Hope Mission, Maitama, Abuja.</span>
+      <span>Built with mercy for Nigeria.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var sent = params.get("sent");
+  if (!sent) return;
+  var box = document.getElementById("form-alert");
+  var msg = params.get("msg") || (sent === "ok" ? "Thank you. Your message has been sent." : "Something went wrong. Please try again.");
+  box.textContent = msg;
+  if (sent === "ok") { box.style.background = "#e6f4ec"; box.style.color = "#14432f"; }
+  else { box.style.background = "#fbeae4"; box.style.color = "#bc5f3c"; }
+  box.style.display = "block";
+  box.scrollIntoView({ behavior: "smooth", block: "center" });
+})();
+</script>
+</body>
+</html>

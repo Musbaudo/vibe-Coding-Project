@@ -49,6 +49,28 @@ php -S localhost:8000
 
 ---
 
+### 3. Nyota Foundations: NGO website
+**Live:** https://mission.nyotacore.com.ng  ·  **Folder:** [`nyota-foundations/`](./nyota-foundations)
+
+Charity website for a foundation supporting displaced families: story-led pages, online giving and a contact form.
+
+**Highlights**
+- Home, About, Donate and Contact pages with a warm, editorial design (Fraunces + Inter)
+- Online donations through Paystack inline checkout, with server-side transaction verification
+- SMTP contact form via PHPMailer, with validation and friendly status messages
+- Secrets kept in a web-blocked `private/config.php`, never in HTML/JS
+
+**Stack:** HTML · CSS · JavaScript · PHP · Paystack · PHPMailer · cPanel hosting
+
+**Run locally**
+```bash
+cd nyota-foundations
+cp private/config.example.php private/config.php   # add SMTP + Paystack test keys
+php -S localhost:8000
+```
+
+---
+
 ## How these were built
 
 1. **Describe** the goal and design intent (Figma specs, screen recordings, reference sites)
@@ -57,4 +79,4 @@ php -S localhost:8000
 4. **Ship** through scripted installers and CI/CD to staging, then production
 
 ## Note
-Secrets (database and SMTP credentials, server deploy scripts) are intentionally excluded. Copy `nyotacore-talent/private/config.example.php` to `config.php` and add your own settings.
+Secrets (database and SMTP credentials, server deploy scripts) are intentionally excluded. In each project, copy `private/config.example.php` to `private/config.php` and add your own settings.

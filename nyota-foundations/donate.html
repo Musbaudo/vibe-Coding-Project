@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Donate — Nyota Foundations</title>
+<meta name="description" content="Give shelter, food and hope to a displaced Nigerian family. Donate securely to Nyota Foundations.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav wrap">
+    <a class="brand" href="index.html"><span class="mark">&#9733;</span><span>Nyota Foundations<small>Light of Hope &middot; Nigeria</small></span></a>
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li class="nav-cta"><a class="btn btn-nav active" href="donate.html">Donate</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="banner">
+  <div class="banner-bg" style="background-image:linear-gradient(120deg,rgba(20,67,47,.94),rgba(36,48,79,.8)),url('https://images.unsplash.com/photo-1605302596022-47965b3eed30?auto=format&fit=crop&w=1600&q=70')"></div>
+  <div class="wrap">
+    <p class="crumb">Home &nbsp;&rsaquo;&nbsp; Donate</p>
+    <h1>Turn mercy into a roof, a meal, a way home</h1>
+    <p>Your gift goes straight to families who have lost everything to conflict. Choose an amount below.</p>
+  </div>
+</section>
+
+<section class="section" id="give">
+  <div class="wrap split">
+    <!-- Donation panel -->
+    <div class="reveal">
+      <div class="donate-box">
+        <p class="eyebrow dark">Make a donation</p>
+        <h3 style="font-size:1.5rem">Choose your gift</h3>
+        <div class="amount-grid">
+          <div class="amount" data-amt="5000">&#8358;5,000<small>Food for a family</small></div>
+          <div class="amount on" data-amt="10000">&#8358;10,000<small>Shelter, 1 week</small></div>
+          <div class="amount" data-amt="25000">&#8358;25,000<small>Family kit</small></div>
+          <div class="amount" data-amt="50000">&#8358;50,000<small>Rebuild a home</small></div>
+        </div>
+        <div class="field">
+          <label for="custom-amount">Or enter your own amount (&#8358;)</label>
+          <input id="custom-amount" type="number" min="100" value="10000" inputmode="numeric">
+        </div>
+        <div class="field">
+          <label for="donor-name">Your name</label>
+          <input id="donor-name" type="text" placeholder="Full name">
+        </div>
+        <div class="field">
+          <label for="donor-email">Email (for your receipt)</label>
+          <input id="donor-email" type="email" placeholder="you@example.com" required>
+        </div>
+        <button class="btn btn-gold" id="pay-btn" type="button" style="width:100%;justify-content:center">Donate &#8358;<span id="pay-amt">10,000</span> securely</button>
+        <p id="pay-note" style="font-size:.8rem;color:var(--muted);margin:.9rem 0 0;text-align:center">Secured by Paystack. You will receive a receipt by email.</p>
+      </div>
+    </div>
+
+    <!-- What your gift does + bank transfer -->
+    <div class="reveal">
+      <p class="eyebrow dark">Where your money goes</p>
+      <h2>Every gift is tracked and reported</h2>
+      <div class="pillar"><span class="n">&#127869;</span><div><h4>&#8358;5,000</h4><p>Feeds a displaced family with a full emergency food parcel.</p></div></div>
+      <div class="pillar"><span class="n">&#127968;</span><div><h4>&#8358;10,000</h4><p>Provides shelter and bedding for a family for a week.</p></div></div>
+      <div class="pillar"><span class="n">&#128230;</span><div><h4>&#8358;25,000</h4><p>A full family kit: mat, blankets, hygiene items and cooking basics.</p></div></div>
+      <div class="pillar"><span class="n">&#127793;</span><div><h4>&#8358;50,000</h4><p>Seeds, tools and a small grant to help a family rebuild at home.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section pine center">
+  <div class="wrap" style="max-width:640px">
+    <div class="reveal center">
+      <p class="eyebrow center">Give monthly</p>
+      <h2>Become a monthly Guardian of Mercy</h2>
+      <p style="color:rgba(255,255,255,.85)">A steady monthly gift lets us plan ahead and respond the moment a new crisis displaces families. Join a community of Nigerians giving hope every month.</p>
+      <a class="btn btn-gold" href="#give" style="margin-top:1rem">Set up monthly giving</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="index.html"><span class="mark">&#9733;</span><span>Nyota Foundations<small>Light of Hope &middot; Nigeria</small></span></a>
+        <p style="margin-top:1rem">A faith-united Nigerian relief foundation sheltering families displaced by banditry and kidnapping.</p>
+      </div>
+      <div><h4>Explore</h4><a href="index.html">Home</a><a href="about.html">About Us</a><a href="donate.html">Donate</a><a href="contact.html">Contact</a></div>
+      <div><h4>Get involved</h4><a href="donate.html">Give a donation</a><a href="contact.html">Volunteer</a><a href="contact.html">Partner with us</a></div>
+      <div><h4>Reach us</h4><a href="mailto:hello@mission.nyotacore.com.ng">hello@mission.nyotacore.com.ng</a><a href="tel:+2348140891605">+234 814 089 1605</a><a href="#">Maitama, Abuja</a></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year">2026</span> Nyota Foundations &middot; Light of Hope Mission, Maitama, Abuja.</span>
+      <span>Built with mercy for Nigeria.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script src="https://js.paystack.co/v1/inline.js"></script>
+<script>
+(function () {
+  // ---- Paystack settings ----
+  // PUBLIC (publishable) key only. NEVER put your secret key in this file.
+  var PAYSTACK_PUBLIC_KEY = "pk_test_REPLACE_WITH_YOUR_PUBLIC_KEY";
+  var CALLBACK_URL = "/payment/online/callback"; // server verifies with the secret key
+
+  var amtInput = document.getElementById("custom-amount");
+  var amtLabel = document.getElementById("pay-amt");
+  var nameInput = document.getElementById("donor-name");
+  var emailInput = document.getElementById("donor-email");
+  var payBtn = document.getElementById("pay-btn");
+  var note = document.getElementById("pay-note");
+
+  function getAmount() {
+    return Math.max(0, Math.floor(parseFloat(amtInput.value) || 0));
+  }
+  function refresh() {
+    if (amtLabel) amtLabel.textContent = getAmount().toLocaleString();
+  }
+  if (amtInput) amtInput.addEventListener("input", refresh);
+  document.querySelectorAll(".amount").forEach(function (a) {
+    a.addEventListener("click", refresh); // fires after main.js sets the value
+  });
+  refresh();
+
+  if (payBtn) {
+    payBtn.addEventListener("click", function () {
+      var amount = getAmount();
+      var email = (emailInput.value || "").trim();
+      if (amount < 100) { note.textContent = "Please enter an amount of at least \u20a6100."; note.style.color = "#bc5f3c"; emailInput.focus(); return; }
+      if (!email || email.indexOf("@") === -1) { note.textContent = "Please enter a valid email for your receipt."; note.style.color = "#bc5f3c"; emailInput.focus(); return; }
+      note.style.color = "";
+
+      var handler = PaystackPop.setup({
+        key: PAYSTACK_PUBLIC_KEY,
+        email: email,
+        amount: amount * 100, // Paystack expects kobo
+        currency: "NGN",
+        metadata: { custom_fields: [{ display_name: "Donor name", variable_name: "donor_name", value: nameInput.value || "" }] },
+        callback: function (response) {
+          // Send reference to the server for verification
+          window.location.href = CALLBACK_URL + "?reference=" + encodeURIComponent(response.reference);
+        },
+        onClose: function () {
+          note.textContent = "Payment window closed. You can try again any time.";
+        }
+      });
+      handler.openIframe();
+    });
+  }
+})();
+</script>
+</body>
+</html>
