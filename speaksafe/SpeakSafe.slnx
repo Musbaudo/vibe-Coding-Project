@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/SpeakSafe.Core/SpeakSafe.Core.csproj" />
+    <Project Path="src/SpeakSafe.Web/SpeakSafe.Web.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/SpeakSafe.Tests/SpeakSafe.Tests.csproj" />
+  </Folder>
+</Solution>

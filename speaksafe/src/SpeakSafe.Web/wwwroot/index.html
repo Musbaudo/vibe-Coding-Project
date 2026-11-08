@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>SpeakSafe Anonymous Reporting</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M20 3l14 5v10c0 9.5-6.2 16.3-14 19-7.8-2.7-14-9.5-14-19V8z' fill='%230b7a4b'/%3E%3C/svg%3E">
+<link rel="preload" href="fonts/unbounded-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="app.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<div class="strip">If you are in danger now, call <b>112</b>. Press <b>Esc</b> twice to leave this page quickly.</div>
+<div class="portal-strip" id="portalStrip" hidden><div class="container"><span id="portalWho"></span><span id="portalHint"></span></div></div>
+
+<header class="nav">
+  <div class="container">
+    <a class="logo" href="#home" aria-label="SpeakSafe home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3l14 5v10c0 9.5-6.2 16.3-14 19-7.8-2.7-14-9.5-14-19V8z" fill="#0b7a4b"/><path d="M13 17.5a7 6 0 0 1 14 0c0 3.3-3.1 6-7 6-1 0-2-.2-2.8-.5L13 25l1-3.4c-.6-1.2-1-2.6-1-4.1z" fill="#fff"/><circle cx="17" cy="17.6" r="1.2" fill="#d42a3c"/><circle cx="20.2" cy="17.6" r="1.2" fill="#d42a3c"/><circle cx="23.4" cy="17.6" r="1.2" fill="#d42a3c"/></svg>
+      <span class="logo-word">SpeakSafe</span>
+    </a>
+    <nav class="links" id="links">
+      <a href="#about">About</a>
+      <a href="#mission">Mission &amp; vision</a>
+      <a href="#resources">Resources</a>
+      <a href="#connect">Find support</a>
+      <a href="#signin" data-tabjump="track">Track a report</a>
+    </nav>
+    <div class="auth" id="authArea"></div>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<!-- ================= HOME ================= -->
+<main id="v-home" class="view">
+  <section class="hero">
+    <div class="container">
+      <div>
+        <div class="eyebrow"><i></i>Workplaces · campuses · online · public spaces</div>
+        <h1>Speak up about sexual harassment. <em>Stay anonymous.</em></h1>
+        <p class="lead">Report what happened without giving your name. Get a private case code, then connect with human rights, legal and counselling organisations when you are ready.</p>
+        <div class="cta-row">
+          <a class="btn btn-red btn-lg" href="#report">Report anonymously</a>
+          <a class="btn btn-ghost btn-lg" href="#register">Create a private account</a>
+        </div>
+        <div class="trust">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 3v6c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10V6z"/></svg>No name or phone number needed</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>You choose who sees your report</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Track progress with a code</span>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="photo"><img src="img/hero.jpg" alt="A woman holding up her palm with the word STOP written on it"></div>
+        <div class="float two"><div class="ic" style="background:var(--green-soft);color:var(--green)">✓</div><div><b>Report SS-7Q2M received</b><small>Identity hidden</small></div></div>
+        <div class="float one"><div class="ic" style="background:var(--red-soft);color:var(--red)">💬</div><div><b>Case officer replied</b><small>Lagos Rights Desk · 2 min ago</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="container">
+      <div class="sec-head"><div class="kicker">How it works</div><h2>Three steps, at your own pace</h2><p>You can stop at any step. Nothing is shared with an organisation unless you choose it.</p></div>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><h3>Tell us what happened</h3><p>A guided form asks what, where and when. Skip anything you are not comfortable answering.</p></div>
+        <div class="step"><div class="n">2</div><h3>Get a private case code</h3><p>Your code and PIN let you check progress later, even without an account.</p></div>
+        <div class="step"><div class="n">3</div><h3>Connect with support</h3><p>Choose a human rights, legal aid, medical or counselling organisation and chat with them securely.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block about" id="about">
+    <div class="container split">
+      <div class="photo"><img src="img/work.jpg" alt="A woman pulls away from a colleague's unwanted touch while coworkers look on"></div>
+      <div>
+        <div class="sec-head" style="margin-bottom:0"><div class="kicker">About SpeakSafe</div><h2>Most harassment goes unreported. We want to change that.</h2>
+        <p>Many people stay silent because they fear retaliation, losing a job or grades, or not being believed. SpeakSafe gives survivors and witnesses a safe first step: record what happened, understand their rights, and reach people who can help.</p></div>
+        <div class="forms-list">
+          <div><i></i>Unwanted touching or groping</div>
+          <div><i></i>Sexual comments, jokes or gestures</div>
+          <div><i></i>Demands for sex in exchange for grades, jobs or favours</div>
+          <div><i></i>Sending or sharing sexual images</div>
+          <div><i></i>Stalking, following or repeated messages</div>
+          <div><i></i>Sexual assault and rape</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="mission">
+    <div class="container">
+      <div class="sec-head"><div class="kicker">Mission &amp; vision</div><h2>Why we exist</h2></div>
+      <div class="mv">
+        <div class="mv-card mission">
+          <div class="bg"><img src="img/hands.jpg" alt=""></div>
+          <div class="tag">Our mission</div>
+          <h3>Make reporting safe, simple and survivor-led.</h3>
+          <p>We give every person a private way to document sexual harassment and reach trusted human rights, legal and care organisations, on their own terms and without fear of exposure.</p>
+        </div>
+        <div class="mv-card vision">
+          <div class="bg"><img src="img/mother.jpg" alt=""></div>
+          <div class="tag">Our vision</div>
+          <h3>Workplaces, campuses and communities free from sexual harassment.</h3>
+          <p>A Nigeria where every survivor is believed, supported and able to seek justice, and where institutions are held accountable.</p>
+        </div>
+      </div>
+      <div class="values">
+        <div><b>Survivor first</b><span>You decide what to share and when.</span></div>
+        <div><b>Anonymity</b><span>No real name is required at any step.</span></div>
+        <div><b>Believe</b><span>Every report is taken seriously.</span></div>
+        <div><b>Accountability</b><span>We work with organisations that act.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block resources" id="resources">
+    <div class="container">
+      <div class="sec-head"><div class="kicker">Resources</div><h2>Get help now</h2><p>Real services in Nigeria you can contact directly, any time.</p></div>
+      <div class="lines">
+        <div class="line urgent"><div class="who">Emergency</div><div class="num">112</div><p>National emergency number, free from any Nigerian phone. In Lagos you can also dial 767.</p></div>
+        <div class="line"><div class="who">WARIF Rape Crisis Centre</div><div class="num">0800 9210 0009</div><p>24-hour confidential toll-free helpline for survivors of rape and sexual violence. <a href="https://warifng.org/" target="_blank" rel="noopener">warifng.org</a></p></div>
+        <div class="line"><div class="who">Lagos DSVA</div><div class="num">08000 333 333</div><p>Domestic and Sexual Violence Agency toll-free line. MTN users can also dial <b>*6820#</b> to report discreetly.</p></div>
+        <div class="line"><div class="who">National Human Rights Commission</div><div class="num">0800 647 2428</div><p>Toll-free line for human rights complaints, or email info@nhrc.gov.ng. <a href="https://www.nigeriarights.gov.ng/" target="_blank" rel="noopener">nigeriarights.gov.ng</a></p></div>
+        <div class="line"><div class="who">Mirabel Centre</div><div class="num" style="font-size:18px">LASUTH, Ikeja</div><p>Nigeria's first sexual assault referral centre. Free medical care, counselling and legal support.</p></div>
+      </div>
+
+      <div class="guides">
+        <div class="guide"><div class="top"><img src="img/hands.jpg" alt="A woman's clasped hands resting on her lap"></div>
+          <div class="body"><h3>If you were assaulted</h3><ul>
+            <li>Get somewhere safe first, then call someone you trust.</li>
+            <li>Visit a sexual assault referral centre within 72 hours for emergency contraception and HIV prevention medicine.</li>
+            <li>If you can, keep the clothes you wore in a paper bag and avoid washing before a medical exam.</li>
+          </ul></div></div>
+        <div class="guide"><div class="top solid">§</div>
+          <div class="body"><h3>Know your rights</h3><ul>
+            <li>The Violence Against Persons (Prohibition) Act 2015 criminalises rape, sexual assault and other violence.</li>
+            <li>Many universities and employers have sexual harassment policies. Ask for them in writing.</li>
+            <li>You can report to the police, the NHRC or a state agency. You do not need a lawyer to start.</li>
+          </ul></div></div>
+        <div class="guide"><div class="top"><img src="img/stop.jpg" alt="A raised palm with STOP SEXUAL ASSAULT written on it"></div>
+          <div class="body"><h3>Keep a record</h3><ul>
+            <li>Write down dates, places, what was said and who was nearby.</li>
+            <li>Screenshot messages, including the sender's profile and the time.</li>
+            <li>Store copies somewhere the other person cannot reach.</li>
+          </ul></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="cta-band">
+      <img src="img/stop.jpg" alt="">
+      <div>
+        <h2>You do not have to carry this alone.</h2>
+        <p>Make a report in about five minutes. Your name is never required.</p>
+        <div class="cta-row"><a class="btn btn-red btn-lg" href="#report">Start a report</a><a class="btn btn-ghost btn-lg" href="#connect">Browse organisations</a></div>
+      </div>
+    </div>
+  </div>
+  <footer class="site"><div class="container">
+    <div><b>SpeakSafe</b><br>Anonymous sexual harassment reporting</div>
+    <div>Press <b>Esc</b> twice or use <b>Quick exit</b> to leave this page fast.</div>
+  </div></footer>
+</main>
+
+<!-- ================= REGISTER ================= -->
+<main id="v-register" class="view app"><div class="container">
+  <div class="auth-wrap">
+    <div class="auth-side">
+      <div><h2>A private account, without your name</h2><p style="opacity:.85;margin-top:10px;font-weight:300">An account lets you follow your reports and message organisations in one place.</p></div>
+      <ul><li>Pick a nickname. Do not use your real name.</li><li>No phone number required.</li><li>Email is optional and never shown to organisations.</li><li>You get a recovery code in case you forget your passphrase.</li></ul>
+    </div>
+    <form class="auth-form" id="regForm" novalidate>
+      <div><h1>Create account</h1><p class="sub">Takes under a minute.</p></div>
+      <div class="field"><label for="regUser">Nickname</label>
+        <div class="inline"><input type="text" id="regUser" autocomplete="off" required maxlength="20"><button type="button" class="btn btn-ghost btn-sm" id="shuffle" aria-label="Suggest another nickname">↻</button></div>
+        <span class="hint">We suggested one at random. You can change it.</span></div>
+      <div class="field"><label for="regPass">Passphrase</label><input type="password" id="regPass" autocomplete="new-password" required minlength="8"><span class="hint">At least 8 characters.</span></div>
+      <div class="field"><label for="regPass2">Confirm passphrase</label><input type="password" id="regPass2" autocomplete="new-password" required></div>
+      <div class="field"><label for="regEmail">Email (optional)</label><input type="email" id="regEmail" placeholder="Leave blank to stay fully anonymous"></div>
+      <div class="err" id="regErr" role="alert"></div>
+      <button class="btn btn-green btn-lg" type="submit">Create account</button>
+      <p class="switch-line">Already have an account? <a href="#signin">Sign in</a> · <a href="#report">Report without an account</a></p>
+    </form>
+  </div>
+</div></main>
+
+<!-- ================= SIGN IN ================= -->
+<main id="v-signin" class="view app"><div class="container">
+  <div class="auth-wrap">
+    <div class="auth-side">
+      <div><h2>Welcome back</h2><p style="opacity:.85;margin-top:10px;font-weight:300">Check your reports and continue conversations with organisations.</p></div>
+      <div class="demo-box" id="demoBox" hidden></div>
+    </div>
+    <div class="auth-form">
+      <div class="tabs" role="tablist" id="signTabs">
+        <button type="button" role="tab" data-tab="survivor" aria-selected="true">My account</button>
+        <button type="button" role="tab" data-tab="track" aria-selected="false">Case code</button>
+        <button type="button" role="tab" data-tab="officer" aria-selected="false">Organisation</button>
+        <button type="button" role="tab" data-tab="admin" aria-selected="false" hidden>Coordinator</button>
+      </div>
+      <form id="inForm" class="stack" data-pane="survivor" novalidate>
+        <div><h1>Sign in</h1><p class="sub">Use the nickname you registered with.</p></div>
+        <div class="field"><label for="inUser">Nickname</label><input type="text" id="inUser" autocomplete="username" required></div>
+        <div class="field"><label for="inPass">Passphrase</label><input type="password" id="inPass" autocomplete="current-password" required></div>
+        <button class="btn btn-green btn-lg" type="submit">Sign in</button>
+        <p class="switch-line">New here? <a href="#register">Create an account</a> · <a href="#recover">Forgot passphrase?</a></p>
+      </form>
+      <form id="trackForm" class="stack" data-pane="track" hidden novalidate>
+        <div><h1>Open a report</h1><p class="sub">Use the case code and PIN you received when you made the report.</p></div>
+        <div class="field"><label for="tCode">Case code</label><input type="text" id="tCode" placeholder="SS-XXXX" autocomplete="off"></div>
+        <div class="field"><label for="tPin">PIN</label><input type="password" id="tPin" inputmode="numeric" maxlength="4" autocomplete="off"></div>
+        <button class="btn btn-green btn-lg" type="submit">Open report</button>
+      </form>
+      <form id="offForm" class="stack" data-pane="officer" hidden novalidate>
+        <div><h1>Organisation sign-in</h1><p class="sub">For case officers of partner organisations.</p></div>
+        <div class="field"><label for="oUser">Username</label><input type="text" id="oUser" autocomplete="username"></div>
+        <div class="field"><label for="oPass">Passphrase</label><input type="password" id="oPass" autocomplete="current-password"></div>
+        <button class="btn btn-green btn-lg" type="submit">Sign in</button>
+      </form>
+      <form id="admForm" class="stack" data-pane="admin" hidden novalidate>
+        <div><h1>Coordinator</h1><p class="sub">Manage organisations and see totals. Reports themselves stay private.</p></div>
+        <div class="field"><label for="aPin">PIN</label><input type="password" id="aPin" inputmode="numeric" autocomplete="off"></div>
+        <button class="btn btn-green btn-lg" type="submit">Sign in</button>
+      </form>
+      <div class="err" id="inErr" role="alert"></div>
+    </div>
+  </div>
+</div></main>
+
+<!-- ================= RECOVER ================= -->
+<main id="v-recover" class="view app"><div class="container">
+  <form class="card stack" id="recForm" style="max-width:520px;margin:0 auto;padding:32px" novalidate>
+    <div><h1 style="font-size:26px">Reset passphrase</h1><p class="sub" style="color:var(--muted)">Use the recovery code you saved when you created your account.</p></div>
+    <div class="field"><label for="rUser">Nickname</label><input type="text" id="rUser" autocomplete="username"></div>
+    <div class="field"><label for="rCode">Recovery code</label><input type="text" id="rCode" placeholder="XXX-XXX-XXX" autocomplete="off"></div>
+    <div class="field"><label for="rPass">New passphrase</label><input type="password" id="rPass" autocomplete="new-password"></div>
+    <div class="err" id="recErr" role="alert"></div>
+    <button class="btn btn-green btn-lg" type="submit">Reset and sign in</button>
+    <p class="switch-line"><a href="#signin">Back to sign in</a></p>
+  </form>
+</div></main>
+
+<!-- ================= DASHBOARD ================= -->
+<main id="v-dashboard" class="view app"><div class="container">
+  <div class="dash-head">
+    <div><h1 id="dashHello">Hello</h1><p>Your reports and conversations are private to this account.</p></div>
+    <div class="cta-row"><a class="btn btn-red" href="#report">+ New report</a><a class="btn btn-ghost" href="#connect">Find support</a></div>
+  </div>
+  <div class="tiles">
+    <div class="tile"><div class="ic" style="background:var(--green-soft);color:var(--green)">📄</div><div><b id="tReports">0</b><span>Reports made</span></div></div>
+    <div class="tile"><div class="ic" style="background:#fff4dc;color:#93620a">⏳</div><div><b id="tOpen">0</b><span>Open reports</span></div></div>
+    <div class="tile"><div class="ic" style="background:var(--red-soft);color:var(--red)">💬</div><div><b id="tUnread">0</b><span>Unread messages</span></div></div>
+  </div>
+  <div class="dash-grid">
+    <section class="card"><h2>My reports</h2><div id="caseList"><div class="loading">Loading…</div></div></section>
+    <section class="card"><h2>Messages</h2><div id="threadMini"></div><a class="btn btn-ghost btn-sm" href="#messages" style="margin-top:12px">Open messages</a></section>
+  </div>
+</div></main>
+
+<!-- ================= REPORT ================= -->
+<main id="v-report" class="view app"><div class="container">
+  <div class="wizard card" style="padding:32px">
+    <div class="progress" id="progress"><div>What happened</div><div>Where &amp; when</div><div>Details</div><div>Privacy &amp; support</div></div>
+    <form id="repForm" novalidate>
+      <div class="wstep" data-step="0">
+        <h1>What happened?</h1><p class="sub">Select everything that applies. You can skip details you do not want to share.</p>
+        <div class="chips" id="typeChips"></div>
+        <div class="alert" id="urgentAlert" role="alert">
+          <b>You may need urgent care.</b> If you were assaulted in the last 72 hours, a sexual assault referral centre can give emergency contraception and HIV prevention medicine. Call the WARIF 24-hour line on <b>0800 9210 0009</b>, or <b>112</b> if you are in danger now.
+        </div>
+      </div>
+      <div class="wstep" data-step="1" hidden>
+        <h1>Where and when?</h1><p class="sub">Approximate answers are fine.</p>
+        <div class="stack">
+          <div><div class="flabel" style="margin-bottom:8px">Where did it happen?</div><div class="chips" id="placeChips"></div></div>
+          <div class="grid2">
+            <div class="field"><label for="rState">State</label><select id="rState"></select></div>
+            <div class="field"><label for="rDate">Date (approximate)</label><input type="date" id="rDate"></div>
+          </div>
+          <div class="grid2">
+            <div class="field"><label for="rFreq">How often?</label><select id="rFreq"></select></div>
+            <div class="field"><label for="rWho">Who was responsible?</label><select id="rWho"></select></div>
+          </div>
+        </div>
+      </div>
+      <div class="wstep" data-step="2" hidden>
+        <h1>Tell us more</h1><p class="sub">Write as much or as little as you like. Leave out anything that could identify you.</p>
+        <div class="stack">
+          <div class="field"><label for="rDesc">What happened, in your own words</label>
+            <textarea id="rDesc" placeholder="For example: what was said or done, how it started, how you responded, and whether anyone saw it."></textarea>
+            <div class="counter"><span id="descCount">0</span> / <span id="descMax">5000</span></div></div>
+          <div class="field"><label for="rWit">Were there witnesses?</label><select id="rWit"></select></div>
+          <div class="field"><span class="flabel">Evidence (optional)</span>
+            <label class="drop" for="rFiles">Add screenshots, photos, audio or documents<br><small id="evHint">Up to 5 files, 10 MB each. Files are encrypted when stored.</small></label>
+            <input type="file" id="rFiles" multiple hidden>
+            <div class="files" id="fileList"></div></div>
+        </div>
+      </div>
+      <div class="wstep" data-step="3" hidden>
+        <h1>Privacy and support</h1><p class="sub">Decide who can see this report and what help you want.</p>
+        <div class="stack">
+          <div><div class="flabel" style="margin-bottom:8px">Your identity</div>
+            <div class="chips">
+              <label class="opt"><input type="radio" name="ident" value="anonymous" checked><span><span><b>Fully anonymous</b><small>No one can see who you are. Recommended.</small></span></span></label>
+              <label class="opt"><input type="radio" name="ident" value="share"><span><span><b>Share my nickname</b><small>Only the organisation you choose sees it. Needs an account.</small></span></span></label>
+            </div></div>
+          <div><div class="flabel" style="margin-bottom:8px">What support would help?</div><div class="chips" id="supportChips"></div></div>
+          <div><div class="flabel" style="margin-bottom:8px">Send to an organisation (optional)</div><div class="orgs" id="pickOrgs"></div></div>
+          <div><div class="flabel" style="margin-bottom:8px">Review</div><dl class="review" id="review"></dl></div>
+        </div>
+      </div>
+      <div class="err" id="repErr" role="alert" style="margin-top:16px"></div>
+      <div class="wiz-nav">
+        <button type="button" class="btn btn-ghost" id="backBtn">Back</button>
+        <button type="button" class="btn btn-green" id="nextBtn">Continue</button>
+      </div>
+    </form>
+  </div>
+</div></main>
+
+<!-- ================= REPORT DONE ================= -->
+<main id="v-done" class="view app"><div class="container">
+  <div class="card" style="max-width:600px;margin:0 auto;padding:36px;display:grid;gap:18px;text-align:center">
+    <div style="width:64px;height:64px;border-radius:20px;background:var(--green-soft);color:var(--green);display:grid;place-items:center;font-size:30px;margin:0 auto">✓</div>
+    <h1 style="font-size:26px">Your report has been recorded</h1>
+    <p style="color:var(--muted)">Save your case code and PIN somewhere private. With them you can open this report from any device. We can't show the PIN again.</p>
+    <div class="grid2"><div><div class="flabel" style="margin-bottom:6px">Case code</div><div class="code-box" id="doneCode"></div></div><div><div class="flabel" style="margin-bottom:6px">PIN</div><div class="code-box" id="donePin"></div></div></div>
+    <p id="doneOrg" style="color:var(--muted);font-size:15px"></p>
+    <p id="doneUpload" class="upload-progress"></p>
+    <div class="cta-row" style="justify-content:center">
+      <button class="btn btn-ghost" id="copyCode" type="button">Copy code and PIN</button>
+      <a class="btn btn-green" id="doneNext" href="#case">Open my report</a>
+    </div>
+  </div>
+</div></main>
+
+<!-- ================= CASE ================= -->
+<main id="v-case" class="view app"><div class="container">
+  <div id="caseBody"><div class="loading">Loading…</div></div>
+</div></main>
+
+<!-- ================= CONNECT ================= -->
+<main id="v-connect" class="view app"><div class="container">
+  <div class="sec-head"><div class="kicker">Find support</div><h2>Connect with human rights and support organisations</h2><p>Choose who you want to talk to. They only see what you choose to share.</p></div>
+  <div class="org-filters">
+    <select id="fService" aria-label="Filter by service"><option value="">All services</option></select>
+    <select id="fState" aria-label="Filter by state"><option value="">All states</option></select>
+  </div>
+  <div class="orgs" id="orgList"><div class="loading">Loading…</div></div>
+</div></main>
+
+<!-- ================= MESSAGES ================= -->
+<main id="v-messages" class="view app"><div class="container">
+  <div class="dash-head"><div><h1>Messages</h1><p id="msgSub">Private conversations with the organisations you contacted.</p></div><a class="btn btn-ghost" href="#connect" id="newConv">+ New conversation</a></div>
+  <div class="msg-layout">
+    <div class="msg-list" id="msgList"></div>
+    <div class="chat" id="chat"></div>
+  </div>
+</div></main>
+
+<!-- ================= ORGANISATION PORTAL ================= -->
+<main id="v-org" class="view app"><div class="container">
+  <div class="dash-head">
+    <div><h1 id="orgTitle">Cases</h1><p>Reports shared with your organisation. Reporters stay anonymous unless they chose to share a nickname.</p></div>
+    <a class="btn btn-ghost" href="#messages">Messages</a>
+  </div>
+  <div class="tiles">
+    <div class="tile"><div class="ic" style="background:var(--red-soft);color:var(--red)">!</div><div><b id="oNew">0</b><span>Waiting for first reply</span></div></div>
+    <div class="tile"><div class="ic" style="background:#fff4dc;color:#93620a">⏳</div><div><b id="oOpen">0</b><span>In progress</span></div></div>
+    <div class="tile"><div class="ic" style="background:var(--green-soft);color:var(--green)">✓</div><div><b id="oClosed">0</b><span>Closed</span></div></div>
+  </div>
+  <div class="org-filters"><div class="tabs" id="orgTabs" style="flex:0 1 420px">
+    <button type="button" data-f="open" aria-selected="true">Open</button><button type="button" data-f="closed" aria-selected="false">Closed</button><button type="button" data-f="all" aria-selected="false">All</button>
+  </div></div>
+  <div id="orgCases"><div class="loading">Loading…</div></div>
+</div></main>
+
+<!-- ================= COORDINATOR ================= -->
+<main id="v-admin" class="view app"><div class="container">
+  <div class="dash-head"><div><h1>Coordinator</h1><p>Totals only. Narratives, messages and reporter identities are never shown here.</p></div><button class="btn btn-green" id="addOrgBtn" type="button">+ Add organisation</button></div>
+  <div class="tiles">
+    <div class="tile"><div class="ic" style="background:var(--green-soft);color:var(--green)">📄</div><div><b id="aReports">0</b><span>Reports</span></div></div>
+    <div class="tile"><div class="ic" style="background:var(--red-soft);color:var(--red)">!</div><div><b id="aUrgent">0</b><span>Open urgent reports</span></div></div>
+    <div class="tile"><div class="ic" style="background:#eef1ff;color:#3a4fb8">🏛</div><div><b id="aOrgs">0</b><span>Active organisations</span></div></div>
+  </div>
+  <div class="dash-grid" style="margin-bottom:18px">
+    <section class="card"><h2>By type</h2><div class="bars" id="aTypes"></div></section>
+    <section class="card"><h2>By status</h2><div class="bars" id="aStatus"></div><h2 style="margin-top:22px">By place</h2><div class="bars" id="aPlace"></div></section>
+  </div>
+  <section class="card"><h2>Organisations</h2><div class="tbl-wrap"><table class="tbl"><thead><tr><th>Organisation</th><th>Services</th><th>Officers</th><th>Open</th><th>Closed</th><th>Status</th><th></th></tr></thead><tbody id="aOrgRows"></tbody></table></div></section>
+</div></main>
+
+<button class="exit" id="quickExit" type="button" title="Leave this page quickly (or press Esc twice)">✕ Quick exit <small>Esc Esc</small></button>
+<div class="decoy" id="decoy" aria-hidden="true">
+  <h1 style="font-family:Georgia,serif;font-size:30px">Easy Jollof Rice</h1>
+  <p style="margin-top:12px;max-width:600px">Parboil 3 cups of rice. Blend tomatoes, peppers and onions, then fry the mix in oil until it thickens. Add stock, seasoning and the rice, cover and cook on low heat until soft.</p>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<div class="modal-bg" id="modal"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><h3 id="modalTitle"></h3><div id="modalBody" style="display:grid;gap:12px;color:var(--muted);font-size:15px"></div><div class="err" id="modalErr" role="alert"></div><div class="cta-row" id="modalBtns"></div></div></div>
+</body>
+</html>

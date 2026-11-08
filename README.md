@@ -71,6 +71,22 @@ php -S localhost:8000
 
 ---
 
+### 4. SpeakSafe
+**Folder:** [`speaksafe/`](./speaksafe)
+
+ASP.NET web application.
+
+**Stack:** C# · ASP.NET · Razor · SQL Server
+
+**Run locally**
+```bash
+cd speaksafe
+# set your connection string in appsettings.json (values are CHANGE_ME in the repo)
+dotnet run
+```
+
+---
+
 ## How these were built
 
 1. **Describe** the goal and design intent (Figma specs, screen recordings, reference sites)
@@ -80,4 +96,5 @@ php -S localhost:8000
 
 ## Note
 Secrets (database and SMTP credentials, server deploy scripts) are intentionally excluded. In each project, copy `private/config.example.php` to `private/config.php` and add your own settings.
+
 

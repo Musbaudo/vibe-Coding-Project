@@ -6,3 +6,12 @@
 .env
 .DS_Store
 Thumbs.db
+
+# ASP.NET
+**/bin/
+**/obj/
+**/.vs/
+*.user
+*.pubxml
+*.pubxml.user
+

@@ -1,0 +1,8 @@
+bin/
+obj/
+.vs/
+*.user
+App_Data/
+publish/
+*.bak
+appsettings.Local.json
