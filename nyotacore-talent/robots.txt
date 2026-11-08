@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /send.php
+
+Sitemap: https://talent.nyotacore.com.ng/sitemap.xml

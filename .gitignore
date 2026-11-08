@@ -1,0 +1,8 @@
+**/private/config.php
+*.bak-*
+*.zip
+*-uploads/
+*-leads.csv
+.env
+.DS_Store
+Thumbs.db

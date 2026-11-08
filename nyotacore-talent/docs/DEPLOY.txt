@@ -1,0 +1,33 @@
+NyotaCore Talent - install on talent.nyotacore.com.ng (Truehost cPanel)
+
+1. DATABASE (cPanel > MySQL Databases)
+   - Create a database, e.g. talent   -> cPanel names it <cpaneluser>_talent
+   - Create a user with a strong password -> <cpaneluser>_talent
+   - "Add User To Database" and tick ALL PRIVILEGES.
+
+2. FILES (cPanel > File Manager)
+   - Open the subdomain's Document Root (cPanel > Domains shows it).
+   - Upload this zip and Extract. Turn on "Show Hidden Files" to check the
+     .htaccess files are there. Delete the zip afterwards.
+
+3. SETTINGS - copy private/config.example.php to private/config.php, then edit it:
+   db_name, db_user  -> the names from step 1 (with the cpanel prefix)
+   db_pass           -> that user's password
+   smtp_user, smtp_pass -> your mailbox login (cPanel > Email Accounts)
+
+4. FIRST RUN
+   - Open https://talent.nyotacore.com.ng/admin/
+     The app creates all tables and seeds roles, locations and statuses
+     automatically, then asks you to create the first admin account.
+   - Any leads saved earlier to nyotacore-talent-leads.csv are imported.
+
+5. TEST
+   - Submit the form on the site once as an employer and once as a candidate
+     with a PDF CV. Both appear under Leads in /admin and in the inbox.
+
+6. PHP version (cPanel > Select PHP Version): 7.4 or newer, 8.1+ preferred,
+   with the pdo_mysql, mbstring and fileinfo extensions ticked.
+
+Private data lives OUTSIDE the web root, next to public_html:
+   nyotacore-talent-uploads/  CVs
+   nyotacore-talent-leads.csv backup used only if the database is down
