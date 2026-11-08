@@ -8,8 +8,8 @@ Real, production websites built through AI-assisted ("vibe") coding: describing 
 
 ## Projects
 
-### 1. NyotaCore: company website
-**Live:** https://nyotacore.com.ng  Â·  **Folder:** [`nyotacore-site/`](./nyotacore-site)
+### 1. Tech Company Website
+**Live:** https://nyotacore.com.ng  Â·  **Folder:** [`tech-company-website/`](./tech-company-website)
 
 Multi-page marketing site for a Lagos-based technology company (software, cloud/DevOps, cybersecurity, AI agents, vessel data services).
 
@@ -25,8 +25,8 @@ Multi-page marketing site for a Lagos-based technology company (software, cloud/
 
 ---
 
-### 2. NyotaCore Talent: recruitment platform
-**Live:** https://talent.nyotacore.com.ng  Â·  **Folder:** [`nyotacore-talent/`](./nyotacore-talent)
+### 2. Recruitment Platform
+**Live:** https://talent.nyotacore.com.ng  Â·  **Folder:** [`recruitment-platform/`](./recruitment-platform)
 
 Recruitment site connecting skilled African talent with employers in Nigeria and abroad, covering skilled trades (mechanics, welders, electricians) and tech roles (Cloud, DevOps, SRE, AI, developers).
 
@@ -42,15 +42,15 @@ Recruitment site connecting skilled African talent with employers in Nigeria and
 
 **Run locally**
 ```bash
-cd nyotacore-talent
+cd recruitment-platform
 cp private/config.example.php private/config.php   # fill in your own DB + SMTP settings
 php -S localhost:8000
 ```
 
 ---
 
-### 3. Nyota Foundations: NGO website
-**Live:** https://mission.nyotacore.com.ng  Â·  **Folder:** [`nyota-foundations/`](./nyota-foundations)
+### 3. NGO Charity Website
+**Live:** https://mission.nyotacore.com.ng  Â·  **Folder:** [`ngo-charity-website/`](./ngo-charity-website)
 
 Charity website for a foundation supporting displaced families: story-led pages, online giving and a contact form.
 
@@ -64,7 +64,7 @@ Charity website for a foundation supporting displaced families: story-led pages,
 
 **Run locally**
 ```bash
-cd nyota-foundations
+cd ngo-charity-website
 cp private/config.example.php private/config.php   # add SMTP + Paystack test keys
 php -S localhost:8000
 ```
@@ -96,5 +96,6 @@ dotnet run
 
 ## Note
 Secrets (database and SMTP credentials, server deploy scripts) are intentionally excluded. In each project, copy `private/config.example.php` to `private/config.php` and add your own settings.
+
 
 
